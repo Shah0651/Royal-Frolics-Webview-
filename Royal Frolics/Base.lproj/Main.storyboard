@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Royal_Frolics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="erU-wN-cx7">
+                                <rect key="frame" x="177.5" y="221" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qZV-o5-pZJ">
+                                <rect key="frame" x="-20" y="0.0" width="415" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qZV-o5-pZJ" secondAttribute="height" multiplier="415:2" id="KmK-xU-dAL"/>
+                                    <constraint firstAttribute="width" constant="415" id="jME-6e-CI3"/>
+                                </constraints>
+                            </progressView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9S-SR-uRM">
+                                <rect key="frame" x="-75" y="-72" width="480" height="1166"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1166" id="r9f-D5-Aq5"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qZV-o5-pZJ" firstAttribute="centerX" secondItem="erU-wN-cx7" secondAttribute="centerX" id="7vU-bK-Oxg"/>
+                            <constraint firstItem="f9S-SR-uRM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-91" id="CuP-vr-Jap"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f9S-SR-uRM" secondAttribute="trailing" constant="-46" id="DGz-Yw-uFJ"/>
+                            <constraint firstItem="f9S-SR-uRM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-72" id="Kpe-dv-MPJ" userLabel="Web View.top = top"/>
+                            <constraint firstItem="qZV-o5-pZJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XPu-EW-ah1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qZV-o5-pZJ" secondAttribute="bottom" constant="816" id="afp-SQ-Vlg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="erU-wN-cx7" secondAttribute="bottom" constant="426" id="cnd-gf-IG1"/>
+                            <constraint firstItem="qZV-o5-pZJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wV7-mU-fK8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="erU-wN-cx7" id="w4H-RZ-rJt"/>
+                        <outlet property="webView" destination="f9S-SR-uRM" id="7sb-i8-Mrz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
